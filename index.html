@@ -26,20 +26,19 @@
         let shortLang = lang;
         if (shortLang.indexOf('-') !== -1)
             shortLang = shortLang.split('-')[0];
-
-        if (shortLang.indexOf('_') !== -1)
+        else if (shortLang.indexOf('_') !== -1)
             shortLang = shortLang.split('_')[0];
 
-        if (shortLang === 'en')
+        else if (shortLang === 'en')
             window.location.replace('./' + shortLang + '/index.html');
 
-        if (shortLang === 'tr')
+        else if (shortLang === 'tr')
             window.location.replace('./' + shortLang + '/index.html');
 
-        if (shortLang === 'fr')
+        else if (shortLang === 'fr')
             window.location.replace('./' + shortLang + '/index.html');
 
-        window.location.replace('./' + en + '/index.html');
+        else { window.location.replace('./en/index.html'); }
 
     </script>
 </body>
